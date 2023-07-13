@@ -25,6 +25,11 @@ def follow_right_edge():
     else:
         turn_left()
 
+# rare_case scenarios where robot is in the centre of maze where 4 sides are open:
+while front_is_clear():
+    move()
+turn_left()
+
 # main loop
 while not at_goal():
     follow_right_edge()
